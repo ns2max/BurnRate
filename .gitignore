@@ -1,0 +1,4 @@
+.DS_Store
+BurnRate.app/
+*.o
+*.d
