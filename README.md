@@ -1,5 +1,10 @@
 # BurnRate
 
+> **macOS will block the app on first open** because it isn't notarized.
+> Right-click `BurnRate.app` → **Open** → **Open** to bypass Gatekeeper. Only needed once.
+
+---
+
 A minimal macOS menu bar app that shows your Claude Code usage as two circular dials — one for the 5-hour rolling window, one for the 7-day window.
 
 ```
@@ -24,9 +29,6 @@ Colors shift green → orange → red as you approach your plan limits.
 **Option A — Download (easiest)**
 
 Download `BurnRate.zip` from the [latest release](../../releases/latest), unzip, and open `BurnRate.app`.
-
-> **macOS will block the app on first open** because it isn't notarized.
-> Right-click `BurnRate.app` → **Open** → **Open** to bypass Gatekeeper. Only needed once.
 
 **Option B — Build from source**
 
@@ -69,12 +71,12 @@ Create `~/.config/burnrate/config.json` to set your plan's limits (used for the 
 
 ```json
 {
-  "fiveHourLimit": 18.0,
-  "sevenDayLimit": 88.0
+  "fiveHourLimit": 7.0,
+  "sevenDayLimit": 40.0
 }
 ```
 
-Default values target the Claude Max plan. Adjust to match your actual plan.
+Default values target the Claude Pro plan. Adjust if you're on Max or see large gaps between estimated and live values.
 
 ---
 

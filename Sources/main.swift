@@ -42,7 +42,7 @@ struct Config: Codable {
     static func load() -> Config {
         if let data = FileManager.default.contents(atPath: configPath),
            let cfg  = try? JSONDecoder().decode(Config.self, from: data) { return cfg }
-        return Config(fiveHourLimit: 18.0, sevenDayLimit: 88.0)
+        return Config(fiveHourLimit: 7.0, sevenDayLimit: 40.0)
     }
 }
 
